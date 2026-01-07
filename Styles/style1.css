@@ -1,0 +1,53 @@
+body {
+  font-family: Arial;
+  background: #f5f5f5;
+}
+
+.center {
+  text-align: center;
+  margin: 40px;
+}
+
+.card {
+  background: white;
+  width: 300px;
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+button {
+  padding: 10px;
+  width: 100%;
+  border: none;
+  background: black;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #ff9800;
+  color: black;
+}
+
+.auth-box {
+  background: white;
+  width: 300px;
+  margin: 100px auto;
+  padding: 25px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.toggle {
+  color: blue;
+  cursor: pointer;
+}

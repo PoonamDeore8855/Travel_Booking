@@ -1,0 +1,194 @@
+/* ===============================
+   GLOBAL RESET
+================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f5f5f5;
+    overflow-x: hidden; /* prevent horizontal overflow */
+}
+
+/* ===============================
+   NAVBAR
+================================ */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    background: rgba(0,0,0,0.35);
+    backdrop-filter: blur(8px);
+    transition: background 0.3s ease;
+}
+
+.navbar.scrolled {
+    background: rgba(0,0,0,0.85);
+}
+
+/* CENTERED CONTENT */
+.navbar .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* LOGO */
+.navbar h2 {
+    color: white;
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* NAV LINKS */
+.navbar nav {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.navbar nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 4px;
+    white-space: nowrap;
+    transition: color 0.3s ease;
+}
+
+/* HOVER UNDERLINE */
+.navbar nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background: #ff9800;
+    transition: width 0.3s ease;
+}
+
+.navbar nav a:hover {
+    color: #ff9800;
+}
+
+.navbar nav a:hover::after {
+    width: 100%;
+}
+
+/* ACTIVE PAGE */
+.navbar nav a.active {
+    color: #ff9800;
+}
+
+.navbar nav a.active::after {
+    width: 100%;
+}
+
+/* ===============================
+   PAGE HERO
+================================ */
+.page-hero {
+    height: 50vh;
+    background:
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+        url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e")
+        center / cover no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding-top: 80px; /* navbar spacing */
+}
+
+.page-hero h1 {
+    font-size: 48px;
+}
+
+.page-hero p {
+    margin-top: 10px;
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/* ===============================
+   PAGES GRID
+================================ */
+.pages-grid {
+    max-width: 1200px;
+    margin: auto;
+    padding: 80px 24px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+/* PAGE CARD */
+.page-card {
+    background: white;
+    padding: 30px;
+    border-radius: 14px;
+    text-decoration: none;
+    color: black;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+}
+
+.page-card h3 {
+    margin-bottom: 10px;
+}
+
+.page-card p {
+    color: #555;
+}
+
+.page-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    background: #ff9800;
+}
+
+.page-card:hover h3,
+.page-card:hover p {
+    color: black;
+}
+
+/* ===============================
+   FOOTER
+================================ */
+.footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* ===============================
+   RESPONSIVE FIX
+================================ */
+@media (max-width: 768px) {
+    .navbar nav {
+        gap: 16px;
+    }
+
+    .navbar nav a {
+        font-size: 13px;
+    }
+
+    .page-hero h1 {
+        font-size: 36px;
+    }
+}
