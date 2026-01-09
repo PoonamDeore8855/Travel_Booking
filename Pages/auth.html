@@ -1,21 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Login | NextTrip</title>
-<link rel="stylesheet" href="../Styles/style1.css">
+    <meta charset="UTF-8">
+    <title>Trip Glow | Login</title>
+
+    <link rel="stylesheet" href="../Styles/style1.css">
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
 </head>
 <body>
 
-<div class="auth-box">
-  <h2 id="title">Login</h2>
+<div class="bg">
 
-  <input id="email" placeholder="Email">
-  <input id="password" type="password" placeholder="Password">
+    <div class="login-card">
+        <h2>TRIP GLOW</h2>
+        <span class="tagline">TRAVELS</span>
 
-  <button onclick="login()">Login</button>
+        <p class="subtitle">Login to your account</p>
 
-  <p class="toggle" onclick="toggle()">Don't have an account? Create one</p>
+       
+
+        
+
+        <input type="email" placeholder="Email Address">
+        <input type="password" placeholder="Password">
+
+        <div class="options">
+            <label><input type="checkbox"> Remember me</label>
+            <a href="#">Forgot Password?</a>
+        </div>
+
+        <button class="login-btn">LOG IN</button>
+
+        <p class="signup">
+            Don’t have an account?
+            <a href="#">Create new account</a>
+        </p>
+    </div>
+
 </div>
 
 <script src="../Scripts/script1.js"></script>
